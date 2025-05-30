@@ -85,3 +85,34 @@ def flood_fill(image, sr, sc):
     return image
 
 print(flood_fill(image, sr, sc))
+
+
+
+Dynamic Programming Robot moving
+
+def pathfinder(m, n):
+    moves = [(1, 0), (0, 1)]  # valid moves: down and right
+
+    def isValid(i, j):
+        return 0 <= i < m and 0 <= j < n
+
+    hm = {}  # cache for memoization
+
+    def rec(i, j):
+        if (i, j) in hm:
+            return hm[(i, j)]
+
+        if i == m - 1 and j == n - 1:
+            return 1  # reached the destination
+
+        ans = 0
+        for dx, dy in moves:
+            x, y = i + dx, j + dy
+            if isValid(x, y):
+                ans += rec(x, y)  # add paths from valid next cells
+
+        hm[(i, j)] = ans
+        return ans
+
+    return rec(0, 0)
+
