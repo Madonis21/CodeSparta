@@ -12,3 +12,18 @@ bloom filter
 Consistent Hashing Algorithm
 LRU Cache implementaion
 Binary serach
+
+
+1 They represent the physical map as a graph
+
+2 They compute ETA by finding the shortest path in a directed weighted graph
+
+3 They don't use Dijkstra’s algorithm because it won't scale with O(n*logn) time complexity
+
+4 They partition the graph and then precompute the best path within each partition
+
+5 They reduce the time complexity from O(n^2) to O(n) by partitioning graph
+
+6 They populate the edge weights of the graph with traffic information
+
+7 They use Kalman filter and Viterbi algorithm for map matching to find ETA accurately
