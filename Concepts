@@ -1,0 +1,21 @@
+
+Cassandra DB 
+🔹 What is Cassandra?
+It’s a NoSQL database, specifically a wide-column store (not a document database).
+
+Designed for massive scalability, high availability, and write-heavy workloads.
+
+Inspired by Google Bigtable and Amazon Dynamo.
+
+Uses CQL (Cassandra Query Language) — SQL-like syntax, but limited features (e.g., no joins).
+
+🔹 Wide-Column Store
+Rows can have a different set of columns → flexible, sparse schema.
+
+Best for time-series, event logs, or massive user activity feeds.
+
+Example:
+
+Row 1: temperature, humidity
+Row 2: temperature
+Row 3: humidity, light
