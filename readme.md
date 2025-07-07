@@ -2,7 +2,7 @@
 Interview Questions
 
 
-Num of island problem
+1. Num of island problem
 
 DFS
 
@@ -59,7 +59,7 @@ newColor = 2
 
 from collections import deque
 
-def flood_fill(image, sr, sc):
+2. def flood_fill(image, sr, sc):
 
     row_len = len(image)
     # 3
@@ -88,7 +88,7 @@ print(flood_fill(image, sr, sc))
 
 
 
-Dynamic Programming Robot moving
+3. Dynamic Programming Robot moving
 
 def pathfinder(m, n):
     moves = [(1, 0), (0, 1)]  # valid moves: down and right
@@ -115,4 +115,21 @@ def pathfinder(m, n):
         return ans
 
     return rec(0, 0)
+
+
+
+4. Lodash get
+
+const a = {
+  b: {
+    c: 2,
+    d: { e: 1 }
+  }
+};
+
+console.log(getValue("b.c", a));     // 2
+console.log(getValue("b.d.e", a));   // 1
+console.log(getValue("b.x", a));     // undefined
+
+
 
